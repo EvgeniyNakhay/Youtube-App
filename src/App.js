@@ -11,7 +11,7 @@ const App = () => {
     <Routes>
       <Route path='/login' element={<Authorization/>}/>
         <Route 
-          path='/'
+          path='/*'
           element={
             <PrivateRoute>
               <MainPage/>
