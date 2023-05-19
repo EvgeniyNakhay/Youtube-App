@@ -6,17 +6,9 @@ import './style.css'
 import { useNavigate } from 'react-router-dom';
 
 const Authorization = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  
-  const onFinish = (values) => {
-    console.log('Success:', values);
-  };
-  
-  const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
 
   const clickEnter = async (e) => {
     e.preventDefault();
@@ -53,8 +45,6 @@ const Authorization = () => {
         initialValues={{
           remember: true,
         }}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
         autoComplete="off"
         style={{
           background: '#fff',
